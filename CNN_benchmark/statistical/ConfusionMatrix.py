@@ -17,6 +17,6 @@ def ConfusionMatrix(y_true, y_predict, normalize=False, class_length=None):
     y_true = np.array(y_true)
     y_predict = np.array(y_predict)
     for true_i, predict_i in zip(y_true.flatten(), y_predict.flatten()):
-        conflusion_matrix[true_i][predict_i] += 1
+        conflusion_matrix[predict_i][true_i] += 1
 
     return conflusion_matrix

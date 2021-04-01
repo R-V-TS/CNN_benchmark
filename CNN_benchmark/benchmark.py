@@ -1,6 +1,5 @@
-import numpy as np
-from statistical import ConfusionMatrix
-from draw import drawMatrix
+from CNN_benchmark.statistical import ConfusionMatrix
+from CNN_benchmark.draw import drawMatrix
 
 y_t = [1, 3, 4, 5, 6, 7, 8, 9, 2, 1, 4, 5, 6, 3, 2, 1, 2, 5, 6, 1, 2, 6, 4, 6, 4, 5, 6]
 y_p = [1, 2, 3, 5, 6, 7, 8, 9, 2, 1, 4, 5, 6, 3, 2, 1, 2, 5, 6, 1, 2, 6, 4, 6, 4, 5, 6]
