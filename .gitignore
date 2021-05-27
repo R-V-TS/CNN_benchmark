@@ -131,3 +131,7 @@ dmypy.json
 ./models_ckpt
 
 ./external_files
+
+./dataset/voc
+./dataset/coco
+./dataset/tmp
