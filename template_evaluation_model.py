@@ -73,7 +73,7 @@ for images in batch_loop(os.path.join(image_path), image_batch):  ### Start imag
         for [x1, y1, x2, y2, conf, class_id] in res:
             ious = []
             for lab in labels:
-                ious.append(__calc_iou([lab, [x1, y1, x2, y2]]))
+                ious.append(__calc_iou([lab['bbox'], [x1, y1, x2, y2]]))
 
             iou_id = np.argmax(ious)
             if ious[iou_id] > 0.1:

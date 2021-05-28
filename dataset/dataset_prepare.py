@@ -103,4 +103,3 @@ if __name__ == "__main__":
         print(files)
         for file in files:
             unpack_coco_dataset(file, 'coco')
-cococ

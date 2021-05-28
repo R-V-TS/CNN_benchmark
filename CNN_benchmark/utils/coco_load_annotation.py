@@ -11,10 +11,11 @@ def LoadDataset(filename: str):
         image_name = imagelist[item['image_id']]
         if image_name not in annotations:
             annotations[image_name] = []
-        annotations[image_name].append({item['bbox']: classes[item['category_id']]})
+        annotations[image_name].append({'bbox': item['bbox'],
+                                        "classname": classes[item['category_id']]})
     return annotations, classes
 
 
 if __name__ == "__main__":
-    dataset, classes = LoadDataset('dataset/coco/annotations/instances_train2017.json')
+    dataset, classes = LoadDataset('/home/rostislavts/Documents/CNN_benchmark/dataset/coco/annotations/instances_train2017.json')
     print(len(dataset))
