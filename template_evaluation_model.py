@@ -32,11 +32,7 @@ model = YOLOv5(model_path)
 
 classes = [v for v in classnames.values()]
 
-
-
-images = [AWGN(image, mu=0, sigma=10)] #numpy array
-
-for images in batch_loop(os.path.join(image_path), image_batch):  ### Start image processing loop
+for images in batch_loop(os.listdir(image_path), image_batch):  ### Start image processing loop
     images_b = [] # batch of images
     annotations = [] # true labels list
     new_images_list = []
