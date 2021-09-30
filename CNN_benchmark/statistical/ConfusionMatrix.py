@@ -9,7 +9,7 @@ def ConfusionMatrix(y_true, y_predict, normalize=False, class_length=None):
     :param normalize: is normalize matrix
     :return: confusion matrix
     """
-    if class_length is None or (class_length != len(set(y_true)) or class_length != len(set(y_predict))):
+    if class_length is None:
         class_length = max(set(y_true)) + 1
 
     conflusion_matrix = np.zeros((class_length, class_length), dtype=np.float32 if normalize else np.uint8)
